@@ -1,6 +1,4 @@
-import React from 'react';
-
-import styled, { css }from 'styled-components';
+import styled from 'styled-components';
 
 export default styled.button`
   background: rgba(108, 99, 255, 0.4);
@@ -9,7 +7,9 @@ export default styled.button`
   padding: 16px;
   font-weight: bold;
   font-size: 48px;
+  border-radius: 20px;
 
+  
   cursor: pointer;
 
   &:hover {

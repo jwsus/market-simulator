@@ -10,7 +10,9 @@ import {
   Footer,
   Info,
   Text,
-  Imagem
+  Imagem,
+  InfoImagem,
+  Wrapper
 } from './styles';
 
 // import Button from '../../components/Button';
@@ -18,16 +20,22 @@ import {
 const Main: React.FC = () => {
   return (
     <Container>
-      <Info>
-        <Text><h1>Bem Vindo<tr/> ao <tr/> Simulador de<tr/>  Supermercado</h1></Text>   
-        <InitButton>
-          <span>Jogar</span>
-        </InitButton>
-      </Info>
-      <Imagem>
-        <img src={Image} />
-      </Imagem>
-      <Footer>a</Footer>
+      <Wrapper>
+        <Info>
+          <Text><h1>Bem Vindo<tr/> ao <tr/> Simulador de<tr/>  Supermercado</h1></Text>   
+          <Link to="/tutorial">
+            <InitButton >
+              <span>Jogar</span>
+            </InitButton>
+            </Link>
+        </Info>
+        <InfoImagem>
+          <Imagem>
+            <img alt="homem com carrinho de supermercado" src={Image} />
+          </Imagem>
+        </InfoImagem>
+        <Footer>a</Footer>
+      </Wrapper>
     </Container>
   );
 }

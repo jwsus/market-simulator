@@ -4,51 +4,39 @@ import Button from '../../components/Button';
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  
-  max-width: 1280px;
+  flex-direction: row;
+  text-align: center;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
 `;
 
 export const Info = styled.div`
-  margin-left: auto;
-    margin-right: auto;
-  align-items: center;
-  position: absolute;
   display: flex;
-  flex-direction: column;
-  flex: 0;
-`;
+  flex-direction: column; 
+  height: 100%;
+  width: 100%;
+  margin-left: 50px;
+  margin-top: 10px;
 
-export const Footer = styled.div`
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%; 
-  height: 50px;;
-  background: var(--primary);
-  color: var(--primary);
+  @media (max-width: 1000px){
+    margin-left: 0;
+  };
 `;
 
 export const Text = styled.div`
-  position: absolute;
-  width: 400px;
-  /* height: 68px; */
-  left: 68px;
-  top: 5px;
+  margin-right: 5px;
   > h1 {
-    /* margin-left: 60px; */
     color: black;
     font-size: 60px;
+    @media (max-width: 1000px){
+      font-size: 60px;
+    };
   }
 `;
 
 export const InitButton = styled(Button)`
-  position: absolute;
-  top: 400px;
-  left: 200px;
+  margin: 50px auto;
   > span {
     color: black;
     opacity: 1;
@@ -56,12 +44,10 @@ export const InitButton = styled(Button)`
 `;
 
 export const Imagem  = styled.div`
-  position: absolute;
-  right: 80px;
+  margin-top: 100px;
   > img {
-    width: max(800px, 500px);
-    height: max(800px, 22vw);
-    left: 100px;
+    width: max(800px);
+    height: min(500px)
   };
 
   @media (max-width: 1280px){
@@ -74,3 +60,33 @@ export const Imagem  = styled.div`
     display: none;
   };
 `;
+
+export const InfoImagem = styled.div`
+  display: flex;
+  flex-direction: column; 
+
+  @media (max-width: 1280px){
+    right: -50px;
+  };
+  @media (max-width: 1200px){
+    right: -100px;
+  };
+`
+export const Footer = styled.div`
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%; 
+  height: 50px;
+  background: var(--primary);
+  color: var(--primary);
+`;
+
+export const Wrapper = styled.div`
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+`
+
